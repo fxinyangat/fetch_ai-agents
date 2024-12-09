@@ -1,0 +1,18 @@
+{
+    "student_agent": {
+        "identity_key": "3c031e6de499c8c0d8f68f2f21863ad03d34477cf4e2dd7b20cb1f9c517def4e",
+        "wallet_key": "Jq/N1w8kt/GTdqOGB6pz+YUQ0KYsadJ/V4RvzGgRy9U="
+    },
+    "broker_agent": {
+        "identity_key": "22906e001187fb1960b4022eb7f0fb8fc6c7d872fe614955f5f8ab81105e12fe",
+        "wallet_key": "QqLP3EEjxga6snUTydv9vI4scDwRtHAq0+ui7wTHDi4="
+    },
+    "test_agent": {
+        "identity_key": "f00c9a3932decc3557a62f3e99280b2b076664211869b7544a5df85f9b69a926",
+        "wallet_key": "7hGn7Sy63c50cVbpaM1pSmhGRbayN8uqUUB631xPEig="
+    },
+    "translation_agent": {
+        "identity_key": "89a511de9f642e80f3ccc391735cf7fa1ea47dc03d7dbac1b086dabb30a1aa36",
+        "wallet_key": "ck9kkviykmQog50Yi9nqY4TJa0D6solT7bIfLDs1fNs="
+    }
+}

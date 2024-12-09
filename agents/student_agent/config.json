@@ -1,0 +1,7 @@
+{
+    "agent_name": "student_agent",
+    "port": 8000,
+    "preferred_language": "es",
+    "broker_address": "agent1q0kkukyk9xehtsykryd5tha4t3qh5fn85ntm8zruvw24y9yeeqnwkhkdhan",
+    "broker_endpoint": "http://127.0.0.1:8002/submit"
+}

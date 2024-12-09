@@ -1,0 +1,6 @@
+{
+    "host": "127.0.0.1",
+    "port": 8003,
+    "agent_name": "translation_agent",
+    "google_credentials_path": "cloud/google_credentials.json"
+}

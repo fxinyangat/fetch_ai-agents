@@ -1,0 +1,6 @@
+{
+    "agent_name": "broker_agent",
+    "port": 8002,
+    "host": "127.0.0.1",
+    "translation_agent_address": "agent1qf2s40hjkkl7lwxfs3t9w4hg8ergkj9uqrug0kkpcdpv4k6px339y7ly4hh"
+}

@@ -1,0 +1,5 @@
+fetchai==0.1.24  # Fetch.ai framework (using latest available version)
+google-cloud-translate==3.9.0  # Google Translate API
+Flask==2.3.3  # For backend API 
+uagents
+pydantic
