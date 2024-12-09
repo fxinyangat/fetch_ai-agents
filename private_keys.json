@@ -14,5 +14,29 @@
     "translation_agent": {
         "identity_key": "89a511de9f642e80f3ccc391735cf7fa1ea47dc03d7dbac1b086dabb30a1aa36",
         "wallet_key": "ck9kkviykmQog50Yi9nqY4TJa0D6solT7bIfLDs1fNs="
+    },
+    "web_student_agent": {
+        "identity_key": "b4884ef18ebebbd7e23a6280f365834f543a4113e47f45bea7621a928732feab",
+        "wallet_key": "RABligOgQvnCZWrU90IWGowLMDzoAP5DTNNDJ2nGenE="
+    },
+    "web_student_agent_a10e8015": {
+        "identity_key": "a86bffa8f4c9767e9f4ced070411317b7dbe35ded0eceac95acec9bdd1e4871f",
+        "wallet_key": "9CRUo/30Ed1fn4GDuigdSJMouTHUWNgNI+U3QHnLkq4="
+    },
+    "web_student_agent_8f1a870e": {
+        "identity_key": "411a0574b64588777f4ea0ccca43d8955fe883e092ecd7d4569b90b68fd40a5e",
+        "wallet_key": "Z3CM5C8zrLJXBxFXcp0fMW9qN081/OVnVTWnTjdFzrA="
+    },
+    "web_student_agent_014e73a8": {
+        "identity_key": "6777f9690920e38688dbd099df2f799a53b774198cfe86353bca9a47ba464240",
+        "wallet_key": "Kk/3JCc1P74WWQ7Flply85C7bc5bemM67B2B4n1oniE="
+    },
+    "web_student_agent_7a39b9cd": {
+        "identity_key": "93e860e149aaad2fe07244b43f1adc4f75f936ed860a791686fe3cd3e6c3df43",
+        "wallet_key": "bBG/e+YHKnEJ4ujW1mdjiSs4toLlNRW/APc9Bv5Nl8g="
+    },
+    "web_student_agent_fa23427d": {
+        "identity_key": "82aa33c0d1bddfca69e1c762b02be7d95715f0e1b9b7162813a797bd526ecb1c",
+        "wallet_key": "7EVqaJn7ZeJ6QGN2LsFyMui2jPLJQRhTf8+ZI5N8CzU="
     }
 }

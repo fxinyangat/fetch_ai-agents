@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Translation Service</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Translation Service</h1>
+        <div class="translation-form">
+            <div class="input-group">
+                <select id="sourceLanguage">
+                    <option value="en">English</option>
+                    <option value="es">Spanish</option>
+                    <option value="fr">French</option>
+                    <!-- Add more languages as needed -->
+                </select>
+                <textarea id="sourceText" placeholder="Enter text to translate"></textarea>
+            </div>
+            
+            <div class="input-group">
+                <select id="targetLanguage">
+                    <option value="es">Spanish</option>
+                    <option value="en">English</option>
+                    <option value="fr">French</option>
+                    <!-- Add more languages as needed -->
+                </select>
+                <textarea id="translatedText" readonly></textarea>
+            </div>
+            
+            <button id="translateBtn">Translate</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script>
+        document.getElementById('translateBtn').addEventListener('click', translate);
+    </script>
+</body>
+</html> 
