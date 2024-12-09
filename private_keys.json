@@ -38,5 +38,13 @@
     "web_student_agent_fa23427d": {
         "identity_key": "82aa33c0d1bddfca69e1c762b02be7d95715f0e1b9b7162813a797bd526ecb1c",
         "wallet_key": "7EVqaJn7ZeJ6QGN2LsFyMui2jPLJQRhTf8+ZI5N8CzU="
+    },
+    "web_student_agent_593b936a": {
+        "identity_key": "799e8eeaf37be9f21ce639ae44476672eeb162926f631e819097908d8f49f15e",
+        "wallet_key": "CLRuEpTznPVP1Fv0X1kXK3/hkXm1GljT+fZYhNw4s/M="
+    },
+    "web_student_agent_e64993cb": {
+        "identity_key": "94bdcf6b8bde6bb2859fb646b28f110964503c186d18817042c71f768ccd61e9",
+        "wallet_key": "qE4qDfAENvDe/KHdRzqK8rnpPW5zQSt9uv+NbXk0v+I="
     }
 }

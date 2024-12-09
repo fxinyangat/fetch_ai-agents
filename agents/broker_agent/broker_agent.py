@@ -8,6 +8,9 @@ import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 from models import TranslationRequest, TranslationResponse
 
+# Store pending requests
+pending_requests = {}
+
 # Load configuration
 CONFIG_PATH = os.path.join(os.path.dirname(__file__), "config.json")
 with open(CONFIG_PATH) as config_file:
@@ -29,6 +32,10 @@ async def handle_translation_request(ctx: Context, sender: str, msg: dict):
         ctx.logger.info(f"Received translation request from {sender}")
         ctx.logger.info(f"Request content: {msg}")
         
+        # Store the requester
+        request_id = id(msg)
+        pending_requests[request_id] = sender
+        
         # Get translation agent address from config
         translation_address = CONFIG.get("translation_agent_address")
         
@@ -45,18 +52,12 @@ async def handle_translation_request(ctx: Context, sender: str, msg: dict):
         
         if response and hasattr(response, 'status') and response.status == 'delivered':
             ctx.logger.info(f"Message delivered to Translation Agent")
-            # Send acknowledgment as Pydantic object
+            # Send initial acknowledgment
             ack_response = TranslationResponse(
                 translated_text="Message forwarded to translation service",
                 error=""
             )
             await ctx.send(sender, ack_response)
-        else:
-            error_response = TranslationResponse(
-                translated_text="",
-                error="Failed to reach translation agent"
-            )
-            await ctx.send(sender, error_response)
             
     except Exception as e:
         ctx.logger.error(f"Error: {str(e)}")
@@ -65,6 +66,22 @@ async def handle_translation_request(ctx: Context, sender: str, msg: dict):
             error=str(e)
         )
         await ctx.send(sender, error_response)
+
+@broker_agent.on_message(TranslationResponse)
+async def handle_translation_response(ctx: Context, sender: str, msg: TranslationResponse):
+    """
+    Handles translation responses from the Translation Agent.
+    """
+    try:
+        ctx.logger.info(f"Received translation response from {sender}")
+        ctx.logger.info(f"Response content: {msg.dict()}")
+        
+        # Forward to all pending requesters
+        for requester in pending_requests.values():
+            await ctx.send(requester, msg)
+            
+    except Exception as e:
+        ctx.logger.error(f"Error handling translation response: {str(e)}")
 
 if __name__ == "__main__":
     fund_agent_if_low(broker_agent.wallet.address())
